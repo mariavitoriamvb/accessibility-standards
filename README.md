@@ -1,78 +1,75 @@
-# Landing Verde & Creme (React + TS + styled-components)
+# 🌿 Landing Page — Acessibilidade & Heurísticas
 
-Uma landing page básica porém **exemplar em usabilidade, acessibilidade e responsividade**.
+Esta landing page foi desenvolvida com o objetivo de ser **um projeto base**, simples e direto, mas que implementa de forma prática:
 
-## Tecnologias
-- React 18 + TypeScript
-- Vite
-- styled-components 6 (arquitetura por componente: `index.tsx` + `styles.ts`)
+- Os **10 princípios das heurísticas de Nielsen** (usabilidade).
+- As principais diretrizes de **acessibilidade (WCAG)**.
+- Boas práticas de **responsividade e padronização visual**.
 
-## Como rodar
-```bash
-npm i
-npm run dev
-```
+A ideia é que este modelo sirva de referência e seja **replicado/adaptado para outras landing pages** no futuro, garantindo consistência entre projetos.
 
-## Paleta de cores (verdes e cremes)
-- `green900` `#0F3D2E` — títulos, rodapé
-- `green700` `#146551` — links ativos, foco
-- `green600` `#1B7F5F` — botões primários
-- `green500` `#2AA176` — realces e foco
-- `green400` `#58B68B` — acentos
-- `green100` `#DFF3E9` — fundos sutis
+---
 
-- `cream50`  `#FFFDF8` — fundo principal
-- `cream100` `#FBF6EC`
-- `cream200` `#F3E9D9` — bordas
-- `cream300` `#E6D6BA` — hovers suaves
+## 🎯 Objetivos
 
-- `gray700`  `#2F3A3B` — texto
-- `gray500`  `#5A6B6C` — texto secundário
-- `gray300`  `#9FB0B1` — elementos desativados
+- Criar uma **estrutura básica e acessível**, aplicando conceitos de UX.
+- Demonstrar na prática como implementar:
+  - Skip links, foco visível e navegação por teclado.
+  - Controles de acessibilidade (ajuste de fonte e alto contraste).
+  - Layout responsivo, adaptável a diferentes telas.
+- Provar que **simplicidade + boas práticas** já entregam valor real em usabilidade.
 
-## Tipografia
-- **Títulos:** Merriweather 700/900
-- **Texto/UI:** Inter 400/500/600/700
-- **Tamanhos (rem):** 12, 14, 16, 18, 20, 24, 32, 40, 48
-- **Altura de linha:** 1.6 texto, 1.1 títulos
+---
 
-## Espaçamento
-Escala 4px: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80
+## ✨ Padrões de Design
 
-## Acessibilidade
-- HTML semântico e **landmarks** (nav/main/footer)
-- **Skip link** visível ao foco
-- **Foco** com `outline` de alto contraste
-- Componentes **navegáveis por teclado**
-- **ARIA** prudente (rotulações, `role=status`)
-- **Validação de formulário** com mensagens claras
-- **`prefers-reduced-motion`** respeitado
-- **Controles de acessibilidade** (tamanho de fonte e contraste) persistidos
+### Paleta de cores
+Baseada em **tons de verde e creme**, com tokens que podem ser adaptados:
 
-## Heurísticas de Nielsen — como foram contempladas
-1. **Status do sistema:** indicadores de envio no formulário; `role="status"`.
-2. **Compatível com o mundo real:** linguagem clara, seção de planos e FAQ.
-3. **Controle e liberdade:** botão fechar menu (overlay), skip link, sem bloqueios.
-4. **Consistência e padrões:** design system unificado (cores, tipografia, componentes).
-5. **Prevenção de erro:** input com `type="email"`, `required`, dicas.
-6. **Reconhecimento em vez de lembrança:** navegação sempre visível; seções nomeadas.
-7. **Flexibilidade e eficiência:** atalhos de navegação, responsividade, controles A11y.
-8. **Estética e design minimalista:** textos concisos, espaços amplos, contraste adequado.
-9. **Ajudar a reconhecer e recuperar erros:** mensagens de erro específicas; estados inválidos.
-10. **Ajuda e documentação:** FAQ embutido com perguntas objetivas.
+- Verdes: `#0F3D2E`, `#146551`, `#1B7F5F`, `#2AA176`, `#58B68B`, `#DFF3E9`
+- Cremes: `#FFFDF8`, `#FBF6EC`, `#F3E9D9`, `#E6D6BA`
+- Texto e neutros: `#2F3A3B`, `#5A6B6C`, `#9FB0B1`
 
-## Estrutura
-```
-src/
-  components/
-    NomeDoComponente/
-      index.tsx
-      styles.ts
-  styles/
-    global.ts
-    theme.ts
-  utils/
-    usePrefersReducedMotion.ts
-  App.tsx
-  main.tsx
-```
+### Tipografia
+- **Display / Títulos**: [Merriweather](https://fonts.google.com/specimen/Merriweather) (700/900)  
+  → reforça hierarquia e transmite seriedade.
+- **Texto / UI**: [Inter](https://fonts.google.com/specimen/Inter) (400–700)  
+  → legível, moderna e ótima para interfaces digitais.
+
+### Escalas e espaçamentos
+- **Tamanhos de fonte**: 12, 14, 16, 18, 20, 24, 32, 40, 48 px (em rem).
+- **Line-height**: 1.1 (títulos) e 1.6 (texto corrido).
+- **Espaçamento modular**: baseado em múltiplos de 4px (4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80).
+
+---
+
+## ♿ Acessibilidade
+
+- **Contraste** ajustável com modo **Alto Contraste**.
+- **Controle de fontes** (A-, A, A+).
+- **HTML semântico** com landmarks (`<header>`, `<main>`, `<footer>`).
+- **ARIA roles** e atributos para feedback claro (`role="status"`, `aria-invalid`, etc).
+- **Prefers-reduced-motion** respeitado para usuários sensíveis a animações.
+
+---
+
+## 🧭 Heurísticas de Usabilidade (Nielsen)
+
+1. **Visibilidade do status** → feedback em formulários e menus.  
+2. **Compatibilidade com o mundo real** → linguagem simples e familiar.  
+3. **Controle e liberdade** → menu móvel com overlay, skip link.  
+4. **Consistência e padrões** → design system unificado.  
+5. **Prevenção de erros** → campos obrigatórios com validação.  
+6. **Reconhecimento, não memorização** → navegação clara e visível.  
+7. **Flexibilidade e eficiência** → atalhos de acessibilidade, responsividade.  
+8. **Estética minimalista** → layout limpo e direto.  
+9. **Ajuda na recuperação de erros** → mensagens claras ao usuário.  
+10. **Ajuda e documentação** → FAQ integrado.
+
+---
+
+## 🚀 Futuro
+
+Esta landing page será a **primeira de uma série**.  
+O padrão aqui definido (cores, tipografia, acessibilidade) será replicado em outras landing pages, garantindo **consistência visual, técnica e de experiência do usuário**.
+
